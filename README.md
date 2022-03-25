@@ -21,3 +21,8 @@ Otherwise, feel free to fork the project, customize it and play with it on your 
 - Country images => https://github.com/djaiss/mapsicon
 - Fixed images => http://www.amcharts.com/svg-maps/ & Wikipedia
 - Emojis & World icon => https://github.com/twitter/twemoji
+
+Version département français : 
+
+- Liste des SVG de chaque départements : https://commons.wikimedia.org/wiki/Category:SVG_maps_of_France_by_department
+- Latitudes / Longitudes : https://www.sigtv.fr/L-IGN-edite-la-nouvelle-carte-de-la-France-administrative-et-calcule-les-centres-geographiques-de-chaque-departement_a334.html
