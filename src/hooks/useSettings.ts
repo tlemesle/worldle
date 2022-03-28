@@ -16,7 +16,7 @@ const defaultSettingsData: SettingsData = {
   theme: window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light",
-  shiftDayCount: 0,
+  shiftDayCount: 11,
   allowShiftingDay: false,
 };
 
