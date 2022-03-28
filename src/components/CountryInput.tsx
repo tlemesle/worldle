@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Autosuggest from "react-autosuggest";
 import { useTranslation } from "react-i18next";
 import {
-  countries,
-  getCountryName,
+  departements,
+  getDepartementName,
   sanitizeCountryName,
 } from "../domain/countries";
 
@@ -28,8 +28,10 @@ export function CountryInput({
       suggestions={suggestions}
       onSuggestionsFetchRequested={({ value }) =>
         setSuggestions(
-          countries
-            .map((c) => getCountryName(i18n.resolvedLanguage, c).toUpperCase())
+          departements
+            .map((c) =>
+              getDepartementName(i18n.resolvedLanguage, c).toUpperCase()
+            )
             .filter((countryName) =>
               sanitizeCountryName(countryName).includes(
                 sanitizeCountryName(value)

@@ -8,8 +8,8 @@ import React, {
 } from "react";
 import { toast } from "react-toastify";
 import {
-  countries,
-  getCountryName,
+  departements,
+  getDepartementName,
   sanitizeCountryName,
 } from "../domain/countries";
 import { CountryInput } from "./CountryInput";
@@ -63,10 +63,10 @@ export function Game({ settingsData, updateSettings }: GameProps) {
         return;
       }
       e.preventDefault();
-      const guessedCountry = countries.find(
+      const guessedCountry = departements.find(
         (country) =>
           sanitizeCountryName(
-            getCountryName(i18n.resolvedLanguage, country)
+            getDepartementName(i18n.resolvedLanguage, country)
           ) === sanitizeCountryName(currentGuess)
       );
 
@@ -105,7 +105,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
       guesses[guesses.length - 1].distance > 0
     ) {
       toastId = toast.info(
-        getCountryName(i18n.resolvedLanguage, country).toUpperCase(),
+        getDepartementName(i18n.resolvedLanguage, country).toUpperCase(),
         {
           autoClose: false,
           delay: 2000,
@@ -204,7 +204,7 @@ export function Game({ settingsData, updateSettings }: GameProps) {
             />
             <a
               className="underline w-full text-center block mt-4"
-              href={`https://www.google.com/maps?q=${getCountryName(
+              href={`https://www.google.com/maps?q=${getDepartementName(
                 i18n.resolvedLanguage,
                 country
               )}+${country.code.toUpperCase()}&hl=${i18n.resolvedLanguage}`}
