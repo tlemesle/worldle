@@ -20,7 +20,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           {" "}
           Devine le <Worldle /> en 6 essais.
         </div>
-        <div>Chaque essai est un département de France métropolitaine + Corse .</div>
+        <div>Chaque essai est un département de France métropolitaine, Corse incluse.</div>
         <div>
           Après chaque essai, vous aurez la distance, la direction et la
           proximité entre votre essai et le département cible.
