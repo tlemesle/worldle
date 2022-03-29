@@ -20,10 +20,13 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           {" "}
           Devine le <Worldle /> en 6 essais.
         </div>
-        <div>Chaque essai doit être un pays, un territoire, etc... valide.</div>
+        <div>
+          Chaque essai doit être un département de France (métropolitaine +
+          Corse) valide.
+        </div>
         <div>
           Après chaque essai, vous aurez la distance, la direction et la
-          proximité entre votre essai et le pays cible.
+          proximité entre votre essai et le département cible.
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
@@ -33,19 +36,18 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Chili",
-                direction: "NE",
-                distance: 13_557_000,
+                name: "Loiret",
+                direction: "SE",
+                distance: 218_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
-            Votre essai <span className="uppercase font-bold">Chili</span> est à{" "}
-            {formatDistance(13_557_000, settingsData.distanceUnit)} du pays
-            cible, le pays cible se trouve dans la direction Nord-Est et vous
-            avez une proximité de seulement 32% car votre essai est plutôt
-            éloigné !
+            Votre essai <span className="uppercase font-bold">Loiret</span> est
+            à {formatDistance(218_000, settingsData.distanceUnit)} du pays
+            cible, le département cible se trouve dans la direction Sud-Est et
+            vous avez une proximité de 81% !
           </div>
         </div>
         <div>
@@ -53,19 +55,19 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Finlande",
-                direction: "SE",
-                distance: 3_206_000,
+                name: "Rhone",
+                direction: "N",
+                distance: 86_000,
               },
             ]}
             settingsData={settingsData}
           />
           <div className="my-2">
             Votre seconde essai{" "}
-            <span className="uppercase font-bold">Finlande</span> est plus
-            proche ! La bonne réponse est à{" "}
-            {formatDistance(3_206_000, settingsData.distanceUnit)}, au Sud-Est
-            et la proximité est de 84%!
+            <span className="uppercase font-bold">Rhone</span> est plus proche !
+            La bonne réponse est à{" "}
+            {formatDistance(86_000, settingsData.distanceUnit)}, au Nord et la
+            proximité est de 92%!
           </div>
         </div>
         <div>
@@ -73,7 +75,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rowCount={1}
             guesses={[
               {
-                name: "Liban",
+                name: "Saone-Et-Loire",
                 direction: "N",
                 distance: 0,
               },
@@ -81,8 +83,9 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            Prochain essai, <span className="uppercase font-bold">Liban</span>,
-            c&apos;est le pays à deviner ! Bien joué !{" "}
+            Prochain essai,{" "}
+            <span className="uppercase font-bold">Saone-Et-Loire</span>,
+            c&apos;est le département à deviner ! Bien joué !{" "}
             <Twemoji text="🎉" options={{ className: "inline-block" }} />
           </div>
         </div>
@@ -90,23 +93,28 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
         Un nouveau <Worldle /> sera disponible chaque jour !
       </div>
-      <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Une question ou suggestion ?</div>
-        <div>
-          Rendez-vous sur la{" "}
-          <a
-            className="underline"
-            href="https://worldle.notion.site/Worldle-4005ca16fc9341e7be8adcfd30628146"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FAQ Worldle
-          </a>{" "}
-          !
-        </div>
+      <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
+        Ce jeu est un fork de{" "}
+        <a
+          className="underline"
+          href="https://worldle.teuteuf.fr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Worldle
+        </a>{" "}
+        créé par{" "}
+        <a
+          className="underline"
+          href="https://twitter.com/teuteuf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @teuteuf
+        </a>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <Worldle /> a été <span className="font-bold">très</span> inspiré par{" "}
+        Worldle a été <span className="font-bold">très</span> inspiré par{" "}
         <a
           className="underline"
           href="https://www.powerlanguage.co.uk/wordle/"
@@ -128,7 +136,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
-          Fait par{" "}
+          Concept par{" "}
           <a
             className="underline"
             href="https://twitter.com/teuteuf"
@@ -149,7 +157,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           )
         </div>
         <div>
-          Vous voulez me soutenir ?{" "}
+          Vous voulez soutenir @teuteuf pour son travail sur Worldle ?{" "}
           <a
             className="underline"
             href="https://www.ko-fi.com/teuteuf"
@@ -157,7 +165,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             rel="noopener noreferrer"
           >
             <Twemoji
-              text="Offrez moi un café ! ☕"
+              text="Offrez lui un café ! ☕"
               options={{ className: "inline-block" }}
             />
           </a>

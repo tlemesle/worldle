@@ -107,7 +107,7 @@ const resources = {
       support: {
         UA: "Soutenez la Croix Rouge Ukrainienne",
       },
-      buyMeACoffee: "Offrez moi un ☕ !",
+      buyMeACoffee: "Offrez un ☕ à @teuteuf, le père de Worldle !",
     },
   },
   es: {
