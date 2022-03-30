@@ -60,7 +60,7 @@ export function Share({
       })
       .join("\n");
 
-    return [title, guessString, "https://departements.tlemense.net"].join("\n");
+    return [title, guessString, "https://departements.tlemesle.net"].join("\n");
   }, [dayString, guesses, hideImageMode, rotationMode, theme]);
 
   return (
