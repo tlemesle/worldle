@@ -1608,7 +1608,7 @@ export const departements: Departement[] = [
     code: "2B",
     latitude: 42.3753562,
     longitude: 9.2385925,
-    name: "CORSE-DU-SUD",
+    name: "HAUTE-CORSE",
   },
   {
     code: "21",
